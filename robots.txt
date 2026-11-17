@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://commerxia.github.io/isitgf/sitemap.xml
