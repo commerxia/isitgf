@@ -15,6 +15,9 @@
 {"@context":"https://schema.org","@type":"MobileApplication","name":"Is It GF? Gluten Free Scanner","alternateName":["Is It GF","Gluten Free Scanner: Is It GF?"],"operatingSystem":"iOS","applicationCategory":"HealthApplication","description":"Scan a barcode to see if a food is gluten free. AI ingredient check, may-contain warnings and restaurant cards in 51 languages.","url":"https://commerxia.github.io/isitgf/","downloadUrl":"https://apps.apple.com/app/id6742151219","installUrl":"https://apps.apple.com/app/id6742151219","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"sameAs":["https://apps.apple.com/app/id6742151219","https://www.youtube.com/channel/UCmfWRcXHUyROJWzd4QpGWqg","https://www.tiktok.com/@gluten.free.scanner"]}
 </script>
 <link rel="icon" href="img/icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Gluten free by country","itemListElement":[{"@type":"ListItem","position":1,"name":"Gluten free in the United States","url":"https://commerxia.github.io/isitgf/gluten-free-in-united-states/"},{"@type":"ListItem","position":2,"name":"Gluten free in Canada","url":"https://commerxia.github.io/isitgf/gluten-free-in-canada/"},{"@type":"ListItem","position":3,"name":"Gluten free in the United Kingdom","url":"https://commerxia.github.io/isitgf/gluten-free-in-united-kingdom/"},{"@type":"ListItem","position":4,"name":"Gluten free in Australia","url":"https://commerxia.github.io/isitgf/gluten-free-in-australia/"},{"@type":"ListItem","position":5,"name":"Gluten free in Germany","url":"https://commerxia.github.io/isitgf/gluten-free-in-germany/"},{"@type":"ListItem","position":6,"name":"Gluten free in France","url":"https://commerxia.github.io/isitgf/gluten-free-in-france/"},{"@type":"ListItem","position":7,"name":"Gluten free in Spain","url":"https://commerxia.github.io/isitgf/gluten-free-in-spain/"},{"@type":"ListItem","position":8,"name":"Gluten free in Italy","url":"https://commerxia.github.io/isitgf/gluten-free-in-italy/"}]}
+</script>
 <style>
 :root{--g:#16a362;--g2:#0f7d4a;--y:#ffd23f;--ink:#14231b;--bg:#f6fbf8}
 *{box-sizing:border-box;margin:0}
@@ -24,6 +27,9 @@ a{color:inherit}
 header{background:linear-gradient(160deg,var(--g),var(--g2));color:#fff;padding:28px 0 64px;overflow:hidden}
 nav{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
 nav img{width:40px;height:40px;border-radius:10px}
+nav a{text-decoration:none}
+.brand{display:flex;align-items:center;gap:12px}
+.navlink{margin-left:auto;font-size:16px}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-top:40px}
 .badge{display:inline-block;background:var(--y);color:var(--ink);font-weight:800;border-radius:999px;padding:6px 14px;border:2px solid var(--ink);margin-bottom:16px}
 h1{font-size:clamp(36px,6vw,60px);line-height:1.05;letter-spacing:-.02em}
@@ -43,6 +49,12 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.01em;margin-bottom:10px}
 .card p{color:#3d5446}
 .trip{background:#fff}
 .flags{font-size:34px;letter-spacing:6px;margin:8px 0 22px}
+.country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+a.country{text-decoration:none;display:flex;flex-direction:column;gap:6px}
+a.country:hover{box-shadow:0 10px 28px rgba(20,35,27,.14)}
+.country .flag{font-size:28px;line-height:1}
+.country strong{font-size:18px}
+.country .blurb{color:#3d5446;font-size:15px;font-weight:400}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
 .steps div{background:var(--bg);border-radius:18px;padding:20px}
 .steps div:before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--g);color:#fff;font-weight:800;margin-bottom:10px}
@@ -50,13 +62,15 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.01em;margin-bottom:10px}
 .final .sub{color:#c9d8cf}
 footer{padding:28px 0;font-size:14px;color:#5c7366;text-align:center}
 footer a{margin:0 8px}
-@media(max-width:800px){.hero,.grid,.steps{grid-template-columns:1fr}.phone{max-width:260px;transform:none}header{padding-bottom:40px}}
+a:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+@media(max-width:800px){.hero,.grid,.steps{grid-template-columns:1fr}.phone{max-width:260px;transform:none}header{padding-bottom:40px}.country-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.country-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header>
  <div class="wrap">
-  <nav><img src="img/icon.png" alt="">Is It GF?</nav>
+  <nav><a class="brand" href="./"><img src="img/icon.png" alt="">Is It GF?</a><a class="navlink" href="#countries">Countries</a></nav>
   <div class="hero">
    <div>
     <div class="badge">Celiac? 👀</div>
@@ -92,7 +106,24 @@ footer a{margin:0 8px}
    <div><h3>Show your phone</h3><p>The card explains gluten and cross-contact.</p></div>
    <div><h3>Order with confidence 😊</h3><p>Ask the questions that matter, like "Do you have gluten free bread?"</p></div>
   </div>
-  <p class="sub" style="margin-top:28px">Watch where to eat gluten free around the world on <a href="https://www.youtube.com/channel/UCmfWRcXHUyROJWzd4QpGWqg">YouTube</a> and <a href="https://www.tiktok.com/@gluten.free.scanner">TikTok</a>.</p>
+  <p class="sub" style="margin-top:28px">Watch where to eat gluten free around the world on <a href="https://www.youtube.com/channel/UCmfWRcXHUyROJWzd4QpGWqg">YouTube</a> and <a href="https://www.tiktok.com/@gluten.free.scanner">TikTok</a>. Read how labelling works in <a href="#countries">eight countries</a>.</p>
+ </div>
+</section>
+
+<section id="countries">
+ <div class="wrap">
+  <h2>Gluten free where you are</h2>
+  <p class="sub">How gluten-free labelling works in the places people shop and travel. Local words, symbols and what to check on the pack.</p>
+  <div class="country-grid">
+   <a class="card country" href="gluten-free-in-united-states/"><span class="flag" aria-hidden="true">🇺🇸</span><strong>United States</strong><span class="blurb">FDA gluten-free means under 20 ppm. The Contains line names wheat; read the ingredients for barley and rye.</span></a>
+   <a class="card country" href="gluten-free-in-canada/"><span class="flag" aria-hidden="true">🇨🇦</span><strong>Canada</strong><span class="blurb">Gluten sources, including oats, are named on the label. English and French words to spot.</span></a>
+   <a class="card country" href="gluten-free-in-united-kingdom/"><span class="flag" aria-hidden="true">🇬🇧</span><strong>United Kingdom</strong><span class="blurb">Gluten free means 20 mg/kg or less, on packs and on menus. Crossed Grain and bold cereals.</span></a>
+   <a class="card country" href="gluten-free-in-australia/"><span class="flag" aria-hidden="true">🇦🇺</span><strong>Australia</strong><span class="blurb">Gluten free means no detectable gluten. Oats cannot carry that claim.</span></a>
+   <a class="card country" href="gluten-free-in-germany/"><span class="flag" aria-hidden="true">🇩🇪</span><strong>Germany</strong><span class="blurb">Glutenfrei, the durchgestrichene Ähre, and lines like "kann Spuren von ... enthalten".</span></a>
+   <a class="card country" href="gluten-free-in-france/"><span class="flag" aria-hidden="true">🇫🇷</span><strong>France</strong><span class="blurb">Sans gluten, the épi barré, and the words for wheat, barley, rye and traces.</span></a>
+   <a class="card country" href="gluten-free-in-spain/"><span class="flag" aria-hidden="true">🇪🇸</span><strong>Spain</strong><span class="blurb">Sin gluten and the Espiga Barrada, plus the label words on Spanish packs.</span></a>
+   <a class="card country" href="gluten-free-in-italy/"><span class="flag" aria-hidden="true">🇮🇹</span><strong>Italy</strong><span class="blurb">Senza glutine and the Spiga Barrata, with the words on Italian labels.</span></a>
+  </div>
  </div>
 </section>
 
@@ -106,7 +137,7 @@ footer a{margin:0 8px}
 
 <footer>
  <p>Always check the label and ask when eating out. The app helps you decide; it doesn't replace medical advice.</p>
- <p style="margin-top:8px"><a href="https://apps.apple.com/app/id6742151219">App Store</a>·<a href="https://www.youtube.com/channel/UCmfWRcXHUyROJWzd4QpGWqg">YouTube</a>·<a href="https://www.tiktok.com/@gluten.free.scanner">TikTok</a></p>
+ <p style="margin-top:8px"><a href="#countries">Gluten free by country</a>·<a href="https://apps.apple.com/app/id6742151219">App Store</a>·<a href="https://www.youtube.com/channel/UCmfWRcXHUyROJWzd4QpGWqg">YouTube</a>·<a href="https://www.tiktok.com/@gluten.free.scanner">TikTok</a></p>
 </footer>
 </body>
 </html>
