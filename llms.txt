@@ -1,0 +1,23 @@
+# Is It GF?
+
+> Is It GF? is an iOS app for people with coeliac disease and anyone eating gluten free. Scan a product barcode or photograph an ingredient list and the app says whether it contains gluten, may contain traces ("may contain" lines, regular oats), or has no gluten ingredients. It also has a restaurant card in 51 languages to show kitchen staff. Free to download; Plus removes limits. App Store: https://apps.apple.com/app/id6742151219
+
+## Guides
+- [Gluten free in the United States](https://commerxia.github.io/isitgf/gluten-free-in-united-states/)
+- [Gluten free in Canada](https://commerxia.github.io/isitgf/gluten-free-in-canada/)
+- [Gluten free in the United Kingdom](https://commerxia.github.io/isitgf/gluten-free-in-united-kingdom/)
+- [Gluten free in Australia](https://commerxia.github.io/isitgf/gluten-free-in-australia/)
+- [Gluten free in Germany](https://commerxia.github.io/isitgf/gluten-free-in-germany/)
+- [Gluten free in France](https://commerxia.github.io/isitgf/gluten-free-in-france/)
+- [Gluten free in Spain](https://commerxia.github.io/isitgf/gluten-free-in-spain/)
+- [Gluten free in Italy](https://commerxia.github.io/isitgf/gluten-free-in-italy/)
+- [Gluten free in Mexico: what to eat + a Spanish restaurant card](https://commerxia.github.io/isitgf/gluten-free-mexico/)
+- [Gluten free in Japan: what to eat + a Japanese restaurant card](https://commerxia.github.io/isitgf/gluten-free-japan/)
+- [Eating out gluten free in France: dishes, phrases + a French restaurant card](https://commerxia.github.io/isitgf/gluten-free-france/)
+- [Gluten free in Brazil: pão de queijo, tapioca + a Portuguese restaurant card](https://commerxia.github.io/isitgf/gluten-free-brazil/)
+- [Gluten free in Argentina: Sin TACC, asado + a Spanish restaurant card](https://commerxia.github.io/isitgf/gluten-free-argentina/)
+- [Hidden gluten on food labels: 7 traps to know](https://commerxia.github.io/isitgf/hidden-gluten-on-labels/)
+
+## Notes
+- Results come from the ingredient list and allergen statements (Open Food Facts and other sources). Always check the pack you are holding; recipes change.
+- The app does not give medical advice.
